@@ -1,9 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-import todoSlice from './todoSlice';
-import React, { useState } from 'react';
+import loading from './loading';
 const store = configureStore({
   reducer: {
-    todoSlice,
+    loading,
   },
 });
 

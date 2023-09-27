@@ -6,10 +6,14 @@ import PassengerTransport from './pages/PassengerTransport';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import store from './store';
 import { Provider } from 'react-redux';
+import { ThemeProvider } from 'styled-components';
+import DefaultTheme from './assets/DefaultTheme';
+import GlobalStyle from './components/global/GlobalStyle';
 function App() {
   return (
-    <div>
-      <Provider store={store}>
+    <Provider store={store}>
+      <ThemeProvider theme={DefaultTheme}>
+        <GlobalStyle />
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<Home />} />
@@ -18,8 +22,8 @@ function App() {
             <Route path='/PassengerTransport' element={<PassengerTransport />} />
           </Routes>
         </BrowserRouter>
-      </Provider>
-    </div>
+      </ThemeProvider>
+    </Provider>
   );
 }
 
