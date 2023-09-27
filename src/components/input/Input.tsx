@@ -1,13 +1,12 @@
-import React, { ChangeEvent } from 'react';
+import { ChangeEvent, FC } from 'react';
 import styled from 'styled-components';
-
 interface InputProps {
   val: string;
   setInput: (value: string) => void;
 }
 
 const InputStyle = styled.input`
-  width: fit-content;
+  width: 100%;
   padding: 10px 16px;
   background-color: ${(props) => props.theme.gray};
   outline: none;
@@ -15,11 +14,14 @@ const InputStyle = styled.input`
   border: none;
   color: ${(props) => props.theme.white};
   ::placeholder {
-    color: ${(props) => props.theme.grayLight};
+    color: ${(props) => props.theme.lightGray};
+  }
+  @media (min-width: ${(props) => props.theme.size.tablet}) {
+    font-size: 20px;
   }
 `;
 
-const Input: React.FC<InputProps> = ({ val, setInput }) => {
+const Input: FC<InputProps> = ({ val, setInput }) => {
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
   };

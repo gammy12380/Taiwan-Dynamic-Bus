@@ -3,7 +3,7 @@ const DefaultTheme = {
   white:'#F5F5F5',
   gray:'#1C1D1D',
   yellow:'#FCD42C',
-  grayLight:'#414242',
+  lightGray:'#414242',
   lightBlue:'#1CC8EE',
   black:'#131414',
   blueGradient: 'linear-gradient(323.99deg, #1CC8EE 65.35%, #FFFFFF 89.01%),linear-gradient(149.2deg, #1CC8EE 29.55%, #07738B 78.54%)',

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Input from '../components/input/Input';
+import InputButton from '../components/input/InputButton';
 import SearchRoute from '../components/layout/SearchRoute';
 function BusStations() {
   const [inputVal, setInputVal] = useState<string>('');
@@ -10,16 +11,18 @@ function BusStations() {
   }, [inputVal]);
 
   return (
-    <div>
+    <div style={{ display: 'grid' }}>
       <SearchRoute
         SearchBarContent={
           <div>
             <Input val={inputVal} setInput={setInputVal}></Input>
           </div>
         }
+        CityContent={<div>City</div>}
         KeyBoardContent={
           <div>
-            <p>KeyBoardContent</p>
+            <InputButton>{<p>13</p>}</InputButton>
+            <InputButton text='手動輸入' />
           </div>
         }
         BusRouteContent={
