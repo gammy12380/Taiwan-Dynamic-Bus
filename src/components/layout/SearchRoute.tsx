@@ -2,9 +2,10 @@ import styled from 'styled-components';
 
 const BusLayout = styled.div`
   display: grid;
-  @media (min-width: ${(props) => props.theme.size.tablet}) {
+  @media (min-width: ${(props) => props.theme.size.laptop}) {
     padding: 30px 120px;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 360px auto;
+    gap: 10px;
     position: relative;
   }
 `;
@@ -16,19 +17,20 @@ const SearchBar = styled.div`
   left: 0;
   height: 74px;
   box-shadow: 0px 4px 5px 0px #00000080;
-  @media (min-width: ${(props) => props.theme.size.tablet}) {
+  @media (min-width: ${(props) => props.theme.size.laptop}) {
     box-shadow: none;
     top: 30px;
     left: 120px;
-    min-height: 80px;
+    height: fit-content;
     width: calc(100% - 60% - 120px);
+    width: 360px;
   }
 `;
 
 const BusRoute = styled.div`
   display: flex;
   height: 100vh;
-  @media (min-width: ${(props) => props.theme.size.tablet}) {
+  @media (min-width: ${(props) => props.theme.size.laptop}) {
     grid-row-start: 2;
     grid-column-start: 2;
   }
@@ -39,27 +41,31 @@ const KeyBoard = styled.div`
   width: 100%;
   bottom: 0;
   left: 0;
-  @media (min-width: ${(props) => props.theme.size.tablet}) {
+  height: 275px;
+  @media (min-width: ${(props) => props.theme.size.laptop}) {
     width: calc(100% - 60% - 120px);
     grid-row-start: 2;
-    top: calc(30px + 80px);
+    top: calc(30px + 70px);
     left: 120px;
+    width: 360px;
   }
 `;
 
 const FillFixed = styled.div`
   display: block;
   height: 74px;
-  @media (min-width: ${(props) => props.theme.size.tablet}) {
+  @media (min-width: ${(props) => props.theme.size.laptop}) {
     display: none;
   }
 `;
 
 const City = styled.div`
-  display: none;
-  @media (min-width: ${(props) => props.theme.size.tablet}) {
-    min-height: 80px;
+  padding: 10px 16px;
+  color: ${(props) => props.theme.white};
+  @media (min-width: ${(props) => props.theme.size.laptop}) {
+    min-height: 60px;
     display: grid;
+    align-items: end;
     grid-row-start: 1;
     grid-column-start: 2;
   }

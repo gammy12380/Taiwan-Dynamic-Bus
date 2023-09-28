@@ -77,14 +77,14 @@ function Home() {
   return (
     <Main>
       {randomCircle()}
-      <Logo isHome style={{ position: 'absolute', top: '50px', left: '50px', width: '200px' }}></Logo>
-      <Link to='./BusStations'>
+      <Logo isHome style={{ position: 'absolute', top: '50px', left: '50px', width: '200px' }} />
+      <Link to='./NearbyBus'>
         <Bubble className='nearByBus-blue'>
           <img src={GpsWSVG} alt='gps-icon' style={{ width: '30px', height: '30px' }} />
           <span style={{ color: '#F5F5F5', fontSize: '20px', fontWeight: 'bold' }}>附近公車站</span>
         </Bubble>
       </Link>
-      <Link to='./NearbyBus'>
+      <Link to='./BusStations'>
         <Bubble className='searchBus-white'>
           <img src={SearchSVG} alt='gps-icon' style={{ width: '30px', height: '30px' }} />
           <span style={{ color: '#131414', fontSize: '20px', fontWeight: 'bold' }}>查詢公車</span>

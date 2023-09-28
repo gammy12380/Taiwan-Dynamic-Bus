@@ -12,12 +12,14 @@ const InputStyle = styled.input`
   outline: none;
   border-radius: 6px;
   border: none;
-  color: ${(props) => props.theme.white};
+  height: 40px;
+  font-weight: bold;
+  color: ${(props) => props.theme.lightBlue};
   ::placeholder {
     color: ${(props) => props.theme.lightGray};
   }
   @media (min-width: ${(props) => props.theme.size.tablet}) {
-    font-size: 20px;
+    font-size: 14px;
   }
 `;
 
